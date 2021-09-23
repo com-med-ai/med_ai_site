@@ -1,92 +1,134 @@
 <!DOCTYPE html>
 <html>
-<title>W3.CSS</title>
-<meta name="viewport" content="width=device-width, initial-scale=1">
-<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  <head>
+    <title>Medical Artificial Intelligence</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css"> <!-- w3.css File -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"> <!-- Sosyal Medya Logo -->
+    <link rel="stylesheet" href="med_ai.css">
 
+    <!-- MENU BAR ITEM BUTTON SCRIPT -->
+    <script>
+      function w3_open() {
+        document.getElementById("main").style.marginLeft = "15%";
+        document.getElementById("mySidebar").style.width = "15%";
+        document.getElementById("mySidebar").style.display = "block";
+        document.getElementById("openNav").style.display = 'none';
+      }
+      function w3_close() {
+        document.getElementById("main").style.marginLeft = "0%";
+        document.getElementById("mySidebar").style.display = "none";
+        document.getElementById("openNav").style.display = "inline-block";
+      }
+    </script>
+      
 
-<body class="w3-black">
-<div class="w3-sidebar w3-bar-block w3-card w3-animate-left w3-black w3-border-right" style="display:none;" id="mySidebar">
-  <button class="w3-bar-item w3-button w3-large"
-  onclick="w3_close()">Close &times;</button>
-  <a href="newhome.html" class="w3-bar-item w3-button">Ana Sayfa</a>
-  <a href="whoarewe.html" class="w3-bar-item w3-button">Hakkımızda</a>
-  <a href="teams.html" class="w3-bar-item w3-button">Çalışma Gruplarımız</a>
-  <a href="#" class="w3-bar-item w3-button">Duyurular</a>
-  <a href="#" class="w3-bar-item w3-button">Projeler</a>
-</div>
+  </head>
 
-<div id="main">
+  <body class="w3-black">
+    
+    <!-- Menu Bar Items -->
+    <div class="w3-sidebar w3-bar-block w3-card w3-animate-left w3-black w3-border-right" style="display:none;" id="mySidebar">
+      <button class="w3-bar-item w3-button w3-large" onclick="w3_close()">
+        Close &times;
+      </button>
+      <a href="newhome.html" class="w3-bar-item w3-button">Ana Sayfa</a>
+      <a href="whoarewe.html" class="w3-bar-item w3-button">Hakkımızda</a>
+      <a href="teams.html" class="w3-bar-item w3-button">Çalışma Grupları</a>
+      <a href="#" class="w3-bar-item w3-button">Etkinlikler</a>
+      <a href="#" class="w3-bar-item w3-button">Projeler</a>
+    </div>
 
-<div class="w3-black">
-  <button id="openNav" class="w3-button w3-black w3-xlarge" onclick="w3_open()">&#9776;</button>
-  <a class="l1" href="https://www.instagram.com/" target="_blank"><span class="fa-stack fa-lg">
-    <i class="fa fa-instagram fa-stack-1x fa-inverse"></i>
-  </span></a>
-  <a class="l1" href="https://www.twitter.com/" target="_blank"><span class="fa-stack fa-lg">
-    <i class="fa fa-twitter-square fa-stack-1x fa-inverse"></i>
-  </span></a>
-  <a class="l1" href="https://www.github.com/" target="_blank"><span class="fa-stack fa-lg">
-    <i class="fa fa-github fa-stack-1x fa-inverse"></i>
-  </span></a>
-  <a class="l1" href="https://www.youtube.com/" target="_blank"><span class="fa-stack fa-lg">
-    <i class="fa fa-youtube-play fa-stack-1x fa-inverse"></i>
-  </span></a>
-</div>
-
-<!-- BODY -->
-<div class="w3-container w3-center w3-animate-bottom w3-margin">
-  <div class="w3-container w3-animate-bottom">
-    <div class="w3-row">
-        <div class="w3-col l1 w3-panel"></div>
-        <div class="w3-panel w3-col l10 w3-margin w3-round-large" style="font-family: 'Lucida Console'; border: 3px solid rgb(24, 24, 24);">
-          <h2>
-              Takım Adı
-          </h2>
-          <div>
-              Lorem ipsum dolor sit amet consectetur adipisicing elit. Modi sapiente, mollitia sequi asperiores molestias nulla quos consectetur, atque sit aliquid ipsum iste officia suscipit, culpa praesentium eum debitis. Quia, a!
-          </div>
-          <h3>
-              Görev Tanımı
-          </h3>
-          <div>
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Temporibus omnis quae animi odio possimus consequuntur aperiam tenetur necessitatibus non eius facilis libero tempore nihil impedit officiis, nemo rem commodi doloribus.
-          </div>
-          <div>
-              <h3>
+    <!--##############################################################-->
+    <!-- HEADER -->
+    <!--##############################################################-->
+    <header class="ai-back-color" id="main">
+      <!-- Menu Bar Opening Button -->
+      <button id="openNav" class="w3-button w3-black w3-xlarge" onclick="w3_open()">
+        &#9776;
+      </button>
+      <!--#########################################################-->
+      <!-- Social Media Links -->
+      <!--#########################################################-->
+      
+      <!-- Instagram -->
+      <a class="l1" href="https://www.instagram.com/" target="_blank">
+        <span class="fa-stack fa-lg">
+          <i class="fa fa-instagram fa-stack-1x fa-inverse"></i>
+        </span></a>
+      <!-- Twitter -->
+      <a class="l1" href="https://www.twitter.com/" target="_blank">
+        <span class="fa-stack fa-lg">
+          <i class="fa fa-twitter-square fa-stack-1x fa-inverse"></i>
+        </span></a>
+      <!-- GitHub -->
+      <a class="l1" href="https://www.github.com/" target="_blank">
+        <span class="fa-stack fa-lg">
+          <i class="fa fa-github fa-stack-1x fa-inverse"></i>
+        </span></a>
+      <!-- YouTube -->
+      <a class="l1" href="https://www.youtube.com/" target="_blank">
+        <span class="fa-stack fa-lg">
+        <i class="fa fa-youtube-play fa-stack-1x fa-inverse"></i>
+        </span></a>
+    </header>
+    
+    <!--##############################################################-->
+    <!-- BODY -->
+    <!--##############################################################-->
+    <div class="w3-container w3-center w3-animate-bottom w3-margin">
+      <div class="w3-container w3-animate-bottom">
+        <div class="w3-row">
+          <!-- Margin Left -->
+          <div class="w3-col l1 w3-panel"></div>
+          <!-- Team Card -->
+          <div class="w3-panel w3-col l10 w3-margin w3-round-large ai-teams-card">
+            <!-- Team Name -->
+            <h2 class="ai-about-us-head">
+                Takım Adı
+            </h2>
+            <div>
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Modi sapiente, mollitia sequi asperiores molestias nulla quos consectetur, atque sit aliquid ipsum iste officia suscipit, culpa praesentium eum debitis. Quia, a!
+            </div>
+            <!-- Team Mission -->
+            <h3 class="ai-about-us-head">
+                Görev Tanımı
+            </h3>
+            <div>
+              Lorem ipsum dolor sit amet consectetur adipisicing elit. Temporibus omnis quae animi odio possimus consequuntur aperiam tenetur necessitatibus non eius facilis libero tempore nihil impedit officiis, nemo rem commodi doloribus.
+            </div>
+            <!-- Communicate Area -->
+            <div>
+              <!-- Team Communication -->
+              <h3 class="ai-about-us-head">
                   İletişim
               </h3>
               <div>
-                  Lorem ipsum dolor, sit amet consectetur adipisicing elit. Incidunt cumque maiores consectetur corporis, magnam nam necessitatibus consequuntur? Rem necessitatibus corporis atque, ipsum pariatur, reprehenderit harum error ratione, adipisci dicta fugit!
+                Lorem ipsum dolor, sit amet consectetur adipisicing elit. Incidunt cumque maiores consectetur corporis, magnam nam necessitatibus consequuntur? Rem necessitatibus corporis atque, ipsum pariatur, reprehenderit harum error ratione, adipisci dicta fugit!
               </div>
+            </div>
           </div>
+          <!-- Margin Right -->
+          <div class="w3-col l1 w3-panel"></div>
         </div>
-        <div class="w3-col l1 w3-panel"></div>
+      </div>
     </div>
-  </div>
-</div>
 
-<script>
-function w3_open() {
-  document.getElementById("main").style.marginLeft = "15%";
-  document.getElementById("mySidebar").style.width = "15%";
-  document.getElementById("mySidebar").style.display = "block";
-  document.getElementById("openNav").style.display = 'none';
-}
-function w3_close() {
-  document.getElementById("main").style.marginLeft = "0%";
-  document.getElementById("mySidebar").style.display = "none";
-  document.getElementById("openNav").style.display = "inline-block";
-}
-</script>
-
-<footer class="w3-container w3-row w3-center">
-  :)
-  <div class="w3-container w3-center w3-padding" style="font-size: 12px;">
-    © Copyright 2021 Med AI Developer Team
-  </div>
-</footer>
-
-</body>
+    <!--##############################################################-->
+    <!-- FOOTER -->
+    <!--##############################################################-->
+    <footer class="w3-container w3-row w3-center w3-margin">
+      <!-- TROL -->
+      <div>
+        :)
+      </div>
+      <!-- License -->
+      <div class="w3-container w3-center w3-padding ai-font-size">
+        © Copyright 2021 Med AI Developer Team
+      </div>  
+    </footer>
+  </body>
 </html>
+
+
+

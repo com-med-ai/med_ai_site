@@ -11,3 +11,8 @@
     color:rgb(8, 255, 8); 
     font-family: 'Lucida Console';
 }
+
+.ai-teams-card {
+    font-family: 'Lucida Console';
+    border: 3px solid rgb(24, 24, 24);
+}
