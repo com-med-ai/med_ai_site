@@ -29,6 +29,11 @@ class User(models.Model):
     email = models.EmailField(verbose_name='Mail Adresi')
     phone_number = models.TextField(max_length=13, verbose_name='Telefon Numarası')
     auth = models.TextField(max_length=7, choices=AuthS.choices, default=AuthS.MEMBER, verbose_name='Üyelik Durumu')
+    
+    
+    def __str__(self) -> str:
+        
+        return f"{self.auth}:{self.name} {self.surname}"
 
 
 # Create your models here.

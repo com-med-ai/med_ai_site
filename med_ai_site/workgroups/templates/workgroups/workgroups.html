@@ -1,182 +1,122 @@
 <!DOCTYPE html>
-<html lang="tr">
-<head>
-  <meta charset="UTF-8">
-  <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Meram Medicine Faculty Community of Medical Artificial Intelligence</title>
-  {% load static %}
+<html>
+  <head>
+    <title>Medical Artificial Intelligence</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    {% load static %}
+    <link rel="stylesheet" href="{% static 'home/css/w3.css' %}"> <!-- w3.css File -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"> <!-- Sosyal Medya Logo -->
+    {% load static %}
+    <link rel="stylesheet" href="{% static 'home/css/med_ai.css' %}">
 
-  <link rel="stylesheet" type="text/css" href="{% static 'css/w3.css' %}">
-  
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-
-  {% load static %}
-
-  <link rel="icon" href="{% static 'logo/med_ai_logo.png' %}" type="PNG">
-
-  <style>
-    a:link {
-      text-decoration: none;
-    }
-
-  </style>
-</head>
-
-
-
-<body class="w3-teal">
-
-
-<!-- #############################################################################
-#                                   HEADER                                       #
-############################################################################## -->
-
-  <header class="w3-teal">
-    <div class="w3-row">
-      <a href="{% url 'home:home' %}">
-        {% load static %}
-        
-        <img class="w3-col l3" src="{% static 'logo/med_ai_logo.png' %}" alt="png" style="width: 10%; margin-left: 15px;">
-      </a>
-
-      <h2 class="w3-col l6 w3-text-white w3-margin-left">Necmettin Erbakan University<br>Medicine Faculty<br>Community of Medical Artificial Intelligence</h2>
+    <!-- MENU BAR ITEM BUTTON SCRIPT -->
+    <script>
+      function w3_open() {
+        document.getElementById("main").style.marginLeft = "15%";
+        document.getElementById("mySidebar").style.width = "15%";
+        document.getElementById("mySidebar").style.display = "block";
+        document.getElementById("openNav").style.display = 'none';
+      }
+      function w3_close() {
+        document.getElementById("main").style.marginLeft = "0%";
+        document.getElementById("mySidebar").style.display = "none";
+        document.getElementById("openNav").style.display = "inline-block";
+      }
+    </script>
       
-      <a href="https://www.erbakan.edu.tr/meramtip" target="_blank">
-        {% load static %}
 
-        <img class="w3-col l3 w3-margin-top w3-display-topright" src="{% static 'logo/neu_logo.png' %}" alt="png" style="width: 10%;">
-      </a>
+  </head>
+
+  <body class="w3-black">
+    
+    <!-- Menu Bar Items -->
+    <div class="w3-sidebar w3-bar-block w3-card w3-animate-left w3-black w3-border-right" style="display:none;" id="mySidebar">
+      <button class="w3-bar-item w3-button w3-large" onclick="w3_close()">
+        Close &times;
+      </button>
+      <a href="{% url 'home:home' %}" class="w3-bar-item w3-button">Ana Sayfa</a>
+      <a href="{% url 'whoarewe:whoarewe' %}" class="w3-bar-item w3-button">Hakkımızda</a>
+      <a href="{% url 'workgroups:workgroups' %}" class="w3-bar-item w3-button">Çalışma Grupları</a>
+      <a href="{% url 'activities:activities' %}" class="w3-bar-item w3-button">Etkinlikler</a>
+      <a href="{% url 'projects:projects' %}" class="w3-bar-item w3-button">Projeler</a>
     </div>
-    <div class="w3-center w3-white">
-      <div class="w3-bar w3-row w3-white w3-text-teal" style="margin-top: 3px;">
-        <a href="{% url 'whoarewe:whoarewe' %}"><h4 class="w3-bar-item w3-hover-teal w3-text-hover-teal w3-round-xxlarge w3-margin-left w3-margin-right" style="margin-top: 2px; margin-bottom: 2px;">Biz Kimiz?</h4></a>
-        <a href="{% url 'activities:activities' %}"><h4 class="w3-bar-item w3-hover-teal w3-text-hover-teal w3-round-xxlarge w3-margin-left w3-margin-right" style="margin-top: 2px; margin-bottom: 2px;">Etkinlikler</h4></a>
-        <a href="{% url 'workgroups:workgroups' %}"><h4 class="w3-bar-item w3-hover-teal w3-text-hover-teal w3-round-xxlarge w3-margin-left w3-margin-right" style="margin-top: 2px; margin-bottom: 2px;">Çalışma Kollarımız</h4></a>
-        <a href="{% url 'projects:projects' %}"><h4 class="w3-bar-item w3-hover-teal w3-text-hover-teal w3-round-xxlarge w3-margin-left w3-margin-right" style="margin-top: 2px; margin-bottom: 2px;">Projelerimiz</h4></a>
-        <a href="{% url 'anouncements:anouncements' %}"><h4 class="w3-bar-item w3-hover-teal w3-text-hover-teal w3-round-xxlarge w3-margin-left w3-margin-right" style="margin-top: 2px; margin-bottom: 2px;">Duyurular</h4></a>
-        <!--<a href="#"><i class="fa fa-user-md w3-bar-item fa-stack-2x"></i></a>-->
-      </div>
-    </div>
-  </header>
-
-
-
-
-<!-- #############################################################################
-#                                   BODY                                         #
-############################################################################## -->
-
-  <div class="w3-row-padding w3-panel w3-round-large w3-margin w3-center" style="background-color: #D5EEBB;">
-    <div class="w3-center" style="margin-top: 64px; margin-bottom: 48px; letter-spacing: 10px; color: teal; font-size: 32px; font-family: 'Times New Roman', Times, serif;">
-        ÇALIŞMA GRUPLARI
-    </div>
-    <div class="w3-container w3-row-padding w3-margin-bottom w3-center w3-margin-top" style="border: 1px solid black;">
-      <div class="w3-col l4 w3-center">
-        <div class="w3-card w3-center w3-round-xxlarge">
-          <img class="w3-margin-top" src="img/ben.png" alt="png" style="width: 40%;">
-          <div class="w3-container w3-center" style="color: #464660;">
-            <h4 style="font-weight: bold;">Py Dever Team</h4>
-            <div class="w3-margin-bottom w3-text-teal">
-              Lorem, ipsum dolor sit amet consectetur adipisicing elit. Totam cupiditate nobis, veritatis consequuntur magni dolorem eos quis, vitae iusto, laborum labore voluptas impedit ab quam assumenda. Labore, nesciunt. Incidunt, veniam?
-            </div>
-          <a class="w3-button w3-round-large w3-margin-bottom w3-teal" href="#">Bize katıl!</a>
-          </div>
-        </div>
-      </div>
-        <div class="w3-col l4 w3-center">
-            <div class="w3-card w3-center w3-round-xxlarge">
-                <img class="w3-margin-top" src="img/ben.png" alt="png" style="width: 40%;">
-                <div class="w3-container w3-center" style="color: #464660;">
-                    <h4 style="font-weight: bold;">Backend Dever Team</h4>
-                    <div class="w3-margin-bottom w3-text-teal">
-                        Lorem, ipsum dolor sit amet consectetur adipisicing elit. Totam cupiditate nobis, veritatis consequuntur magni dolorem eos quis, vitae iusto, laborum labore voluptas impedit ab quam assumenda. Labore, nesciunt. Incidunt, veniam?
-                    </div>
-                    <a class="w3-button w3-round-large w3-margin-bottom w3-teal" href="#">Bize katıl!</a>
-                </div>
-              </div>
-          </div>
-          <div class="w3-col l4 w3-center">
-            <div class="w3-card w3-center w3-round-xxlarge">
-                <img class="w3-margin-top" src="img/ben.png" alt="png" style="width: 40%;">
-                <div class="w3-container w3-center" style="color: #464660;">
-                    <h4 style="font-weight: bold;">Frontend Dever Team</h4>
-                    <div class="w3-margin-bottom w3-text-teal">
-                        Lorem, ipsum dolor sit amet consectetur adipisicing elit. Totam cupiditate nobis, veritatis consequuntur magni dolorem eos quis, vitae iusto, laborum labore voluptas impedit ab quam assumenda. Labore, nesciunt. Incidunt, veniam?
-                    </div>
-                    <a class="w3-button w3-round-large w3-margin-bottom w3-teal" href="#">Bize katıl!</a>
-                </div>
-              </div>
-          </div>
-    </div>
-    <div class="w3-container w3-row-padding w3-margin-bottom w3-center w3-margin-top" style="border: 1px solid black;">
-        <div class="w3-col l4 w3-center">
-          <div class="w3-card w3-center w3-round-xxlarge">
-              <img class="w3-margin-top" src="img/ben.png" alt="png" style="width: 40%;">
-              <div class="w3-container w3-center" style="color: #464660;">
-                  <h4 style="font-weight: bold;">GUI Dever Team</h4>
-                  <div class="w3-margin-bottom w3-text-teal">
-                      Lorem, ipsum dolor sit amet consectetur adipisicing elit. Totam cupiditate nobis, veritatis consequuntur magni dolorem eos quis, vitae iusto, laborum labore voluptas impedit ab quam assumenda. Labore, nesciunt. Incidunt, veniam?
-                  </div>
-                  <a class="w3-button w3-round-large w3-margin-bottom w3-teal" href="#">Bize katıl!</a>
-              </div>
-            </div>
-        </div>
-        <div class="w3-col l4 w3-center">
-            <div class="w3-card w3-center w3-round-xxlarge">
-                <img class="w3-margin-top" src="img/ben.png" alt="png" style="width: 40%;">
-                <div class="w3-container w3-center" style="color: #464660;">
-                    <h4 style="font-weight: bold;">Designer Team</h4>
-                    <div class="w3-margin-bottom w3-text-teal">
-                        Lorem, ipsum dolor sit amet consectetur adipisicing elit. Totam cupiditate nobis, veritatis consequuntur magni dolorem eos quis, vitae iusto, laborum labore voluptas impedit ab quam assumenda. Labore, nesciunt. Incidunt, veniam?
-                    </div>
-                    <a class="w3-button w3-round-large w3-margin-bottom w3-teal" href="#">Bize katıl!</a>
-                </div>
-              </div>
-          </div>
-          <div class="w3-col l4 w3-center">
-            <div class="w3-card w3-center w3-round-xxlarge">
-                <img class="w3-margin-top" src="img/ben.png" alt="png" style="width: 40%;">
-                <div class="w3-container w3-center" style="color: #464660;">
-                    <h4 style="font-weight: bold;">Docer Team</h4>
-                    <div class="w3-margin-bottom w3-text-teal">
-                        Lorem, ipsum dolor sit amet consectetur adipisicing elit. Totam cupiditate nobis, veritatis consequuntur magni dolorem eos quis, vitae iusto, laborum labore voluptas impedit ab quam assumenda. Labore, nesciunt. Incidunt, veniam?
-                    </div>
-                    <a class="w3-button w3-round-large w3-margin-bottom w3-teal" href="#">Bize katıl!</a>
-                </div>
-              </div>
-          </div>
-    </div>
-  </div>
-
-
-<!-- #############################################################################
-#                                   FOOTER                                       #
-############################################################################## -->
-
-  <footer class="w3-container w3-row" style="background-color: #464660;">
-    <div class="w3-container w3-half w3-row w3-margin-top w3-center">
-      <a class="w3-col l1" href="https://www.instagram.com/" target="_blank"><span class="fa-stack fa-lg">
-        <i class="fa fa-instagram fa-stack-1x fa-inverse"></i>
-      </span></a>
-      <a class="w3-col l1" href="https://www.twitter.com/" target="_blank"><span class="fa-stack fa-lg">
-        <i class="fa fa-twitter-square fa-stack-1x fa-inverse"></i>
-      </span></a>
-      <a class="w3-col l1" href="https://www.github.com/" target="_blank"><span class="fa-stack fa-lg">
-        <i class="fa fa-github fa-stack-1x fa-inverse"></i>
-      </span></a>
-      <a class="w3-col l1" href="https://www.youtube.com/" target="_blank"><span class="fa-stack fa-lg">
+    <!--##############################################################-->
+    <!-- HEADER -->
+    <!--##############################################################-->
+    <header class="ai-back-color" id="main">
+      <!-- Menu Bar Opening Button -->
+      <button id="openNav" class="w3-button w3-black w3-xlarge" onclick="w3_open()">
+        &#9776;
+      </button>
+      <!--#########################################################-->
+      <!-- Social Media Links -->
+      <!--#########################################################-->
+      
+      <!-- Instagram -->
+      <a class="l1" href="https://www.instagram.com/" target="_blank">
+        <span class="fa-stack fa-lg">
+          <i class="fa fa-instagram fa-stack-1x fa-inverse"></i></span></a>
+      <!-- Twitter -->
+      <a class="l1" href="https://www.twitter.com/" target="_blank">
+        <span class="fa-stack fa-lg">
+          <i class="fa fa-twitter-square fa-stack-1x fa-inverse"></i>
+        </span></a>
+      <!-- GitHub -->
+      <a class="l1" href="https://www.github.com/" target="_blank">
+        <span class="fa-stack fa-lg">
+          <i class="fa fa-github fa-stack-1x fa-inverse"></i>
+        </span></a>
+      <!-- YouTube -->
+      <a class="l1" href="https://www.youtube.com/" target="_blank">
+        <span class="fa-stack fa-lg">
         <i class="fa fa-youtube-play fa-stack-1x fa-inverse"></i>
-      </span></a>
+        </span></a>
+    </header>
+    <!--##############################################################-->
+    <!-- BODY -->
+    <!--##############################################################-->
+    <div class="w3-container  w3-animate-bottom w3-margin">
+      <div class="w3-container w3-animate-bottom">
+        <div class="w3-row">
+          <!-- Margin Left -->
+          <div class="w3-col l1 w3-panel"></div>
+          {% for team in teams %}
+          <!-- Team Link -->
+          <a href="{% url 'workgroups:workgroup' team.id %}">
+          
+            <div class="w3-panel w3-col l3 w3-margin w3-round-large ai-teams-card">
+              <img class="w3-margin" src="img/eagle.png" alt="">
+              <!-- Team Name -->
+              <h2 class="w3-margin w3-center ai-about-us-head">
+                <span style="color:red;">&lt/</span>{{ team.team_name }}<span style="color:red;">&gt</span>
+              </h2>
+              <!-- Stilize Team Name -->
+              <div style="color: turquoise;"><span style="color: orange;">class</span> {{ team.stylist_name }}(<span style="color: rgb(98,228,86)">Team</span>):</div>
+              <!-- Team Description -->
+              <div class="w3-margin-left w3-margin-bottom">
+                {{team.description}}
+              </div>
+            </div>
+          </a>
+              {% endfor %}
+          <!-- Margin Right -->
+          <div class="w3-col l1 w3-panel"></div>
+        </div>
     </div>
-    <div class="w3-container w3-center w3-half">
-      <div class="w3-container w3-margin-top">Zehra Avan • <a href = "mailto: zehraa@example.com">zehraa@example.com</a></div>
-      <div class="w3-container w3-margin-bottom">Nazire Nur Onat • <a href = "mailto: nazire@example.com">nazire@example.com</a></div>
-    </div>
-  </footer>
-  <div class="w3-container w3-center w3-padding">
-    © Copyright 2021 Med AI Developer Team
-  </div>
-  
-</body>
+
+
+<!--##############################################################-->
+    <!-- FOOTER -->
+    <!--##############################################################-->
+    <footer class="w3-container w3-row w3-center w3-margin">
+      <!-- TROL -->
+      <div>
+        :)
+      </div>
+      <!-- License -->
+      <div class="w3-container w3-center w3-padding ai-font-size">
+        © Copyright 2021 Med AI Developer Team
+      </div>  
+    </footer>
+  </body>
 </html>
