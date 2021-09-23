@@ -1,6 +1,6 @@
 from django.shortcuts import render, HttpResponse
 
 def falan(request):
-    return HttpResponse('Hello World')
+    return render(request, "home/home.html")
 
 # Create your views here.
